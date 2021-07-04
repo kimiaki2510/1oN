@@ -8,6 +8,7 @@
     </head>
     <body>
         <div id="app"></div>
+        <h1>Tom</h1>
     </body>
     <script src="{{ mix('/js/index.js') }}"></script>
 </html>
