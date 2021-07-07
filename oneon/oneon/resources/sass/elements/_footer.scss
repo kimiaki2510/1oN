@@ -1,0 +1,35 @@
+/* footer */@at-root
+
+.footer-backgroundcolor {
+  display: flow-root;
+  background-color: #EAEAEA;
+  height: 61px;
+}
+
+.footer-container {
+  display: flow-root;
+  margin: 0 auto;
+  width: 960px;
+}
+
+.footer-left {
+  float: left;
+  margin-top:20px;
+}
+
+.footer-left a {
+  font-size: 14px;
+  margin-right: 20px;
+  color: #00000061;
+  text-decoration: none;
+}
+
+.footer-right {
+  float: right;
+  margin-top:20px;
+}
+
+.footer-right p {
+  font-size: 14px;
+  color: #00000061;
+}
