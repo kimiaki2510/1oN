@@ -1,4 +1,5 @@
 const mix = require('laravel-mix');
+const glob = require('glob');
 
 /*
  |--------------------------------------------------------------------------
@@ -14,6 +15,17 @@ const mix = require('laravel-mix');
 // mix.react('resources/js/app.js', 'public/js')
 //    .sass('resources/sass/app.scss', 'public/css');
 
-mix.ts('resources/ts/index.tsx', 'public/js')
-   .sass('resources/sass/app.scss', 'public/css')
+// mix.ts('resources/ts/index.tsx', 'public/js')
+mix.sass('resources/sass/app.scss', 'public/css')
    .version(); 
+
+glob.sync('resources/ts/*.tsx').map(function (file) {
+   mix.ts(file, 'public/js');
+});
+glob.sync('resources/sass/pages/*.scss').map(function (file) {
+   mix.sass(file, 'public/css');
+});
+
+if (mix.inProduction()) {
+   mix.version();
+ }
