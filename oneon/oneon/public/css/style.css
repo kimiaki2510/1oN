@@ -628,7 +628,9 @@ ul.navbar-nav > li > a:focus {
   font: normal normal bold 20px/30px Meiryo;
   color: #FFFFFF;
   background-color: #FBB03B;
-  padding: 15px 60px;
+  width: 320px;
+  line-height: 60px;
+  text-align: center;
   margin-bottom: 5px;
   border: 1px solid #FBB03B;
   border-radius: 30px 30px 30px 30px;
@@ -640,7 +642,9 @@ ul.navbar-nav > li > a:focus {
   font: normal normal bold 16px/24px Meiryo;
   color: #FFFFFF;
   background-color: #FBB03B;
-  padding: 8px 80px;
+  width: 320px;
+  line-height: 40px;
+  text-align: center;
   margin-bottom: 5px;
   border: 1px solid #FBB03B;
   border-radius: 30px 30px 30px 30px;
@@ -652,7 +656,9 @@ ul.navbar-nav > li > a:focus {
   font: normal normal bold 20px/30px Meiryo;
   color: #FBB03B;
   background: #FFFFFF;
-  padding: 15px 60px;
+  width: 320px;
+  line-height: 60px;
+  text-align: center;
   margin-bottom: 5px;
   border: 1px solid #FBB03B;
   border-radius: 30px 30px 30px 30px;
@@ -664,7 +670,9 @@ ul.navbar-nav > li > a:focus {
   font: normal normal bold 16px/24px Meiryo;
   color: #FBB03B;
   background: #FFFFFF;
-  padding: 8px 80px;
+  width: 320px;
+  line-height: 40px;
+  text-align: center;
   margin-bottom: 5px;
   border: 1px solid #FBB03B;
   border-radius: 30px 30px 30px 30px;
@@ -676,7 +684,9 @@ ul.navbar-nav > li > a:focus {
   font: normal normal bold 20px/30px Meiryo;
   color: #FFFFFF;
   background: #BBBBBB;
-  padding: 15px 60px;
+  width: 320px;
+  line-height: 60px;
+  text-align: center;
   margin-bottom: 5px;
   border: 1px solid #BBBBBB;
   border-radius: 30px 30px 30px 30px;
@@ -688,7 +698,9 @@ ul.navbar-nav > li > a:focus {
   font: normal normal bold 16px/24px Meiryo;
   color: #FFFFFF;
   background: #BBBBBB;
-  padding: 8px 80px;
+  width: 320px;
+  line-height: 40px;
+  text-align: center;
   margin-bottom: 5px;
   border: 1px solid #BBBBBB;
   border-radius: 30px 30px 30px 30px;
@@ -709,19 +721,176 @@ ul.navbar-nav > li > a:focus {
   text-align: left;
 }
 
-.form-box {
+.form-textarea-long {
   display: inline-block;
   font-size: 16px;
   font: normal normal normal 16px/24px Meiryo;
   color: #00000061;
   background-color: #F7F7F7;
   width: 488px;
-  height: 92px;
+  height: 204px;
   padding: 20px;
   margin-bottom: 5px;
   border: 1px solid #DDDDDD;
   border-radius: 10px 10px 10px 10px;
   text-align: left;
+}
+
+.form-textarea-short {
+  display: inline-block;
+  font-size: 16px;
+  font: normal normal normal 16px/24px Meiryo;
+  color: #00000061;
+  background-color: #F7F7F7;
+  width: 488px;
+  height: 132px;
+  padding: 20px;
+  margin-bottom: 5px;
+  border: 1px solid #DDDDDD;
+  border-radius: 10px 10px 10px 10px;
+  text-align: left;
+}
+
+/* ------------タグ------------- */
+.tag-on {
+  display: inline-block;
+  font-size: 14px;
+  font: normal normal bold 14px/19px Noto Sans;
+  color: #FFFFFF;
+  background-color: #FBB03B;
+  text-align: center;
+  font: normal normal bold 14px/19px Noto Sans;
+  padding: 8px 40px;
+  border-radius: 30px 30px 30px 30px;
+  letter-spacing: var(--unnamed-character-spacing-0);
+}
+
+.tag-off {
+  display: inline-block;
+  font-size: 14px;
+  font: normal normal bold 14px/19px Noto Sans;
+  color: #FFFFFF;
+  background-color: #BBBBBB;
+  text-align: center;
+  font: normal normal bold 14px/19px Noto Sans;
+  padding: 8px 40px;
+  border-radius: 30px 30px 30px 30px;
+  letter-spacing: var(--unnamed-character-spacing-0);
+}
+
+.tag-selected-cols {
+  display: inline-block;
+  font-size: 11px;
+  font: normal normal bold 11px/15px Noto Sans;
+  color: #FBB03B;
+  border: 1px solid var(--ファンクション-fbb03b);
+  background-color: #FFFFFF;
+  padding: 5px 15px;
+  margin-right: 5px;
+  border: 1px solid #FBB03B;
+  border-radius: 30px 30px 30px 30px;
+  cursor: pointer;
+}
+
+.tag-selected-rows {
+  display: inline-block;
+  font-size: 11px;
+  font: normal normal bold 11px/15px Noto Sans;
+  color: #FBB03B;
+  border: 1px solid var(--ファンクション-fbb03b);
+  background-color: #FFFFFF;
+  padding: 5px 15px;
+  margin-right: 5px;
+  border: 1px solid #FBB03B;
+  border-radius: 30px 30px 30px 30px;
+  cursor: pointer;
+}
+
+/* ------------カード------------- */
+.card-background-white {
+  padding: 40px;
+  text-align: center;
+  width: 720px;
+  height: 100%;
+  background-color: #FFFFFF;
+  box-shadow: 0px 5px 10px #0000001A;
+  border-radius: 10px 10px 10px 10px;
+}
+
+.card-background-fanction {
+  padding: 40px 0 0 0;
+  text-align: center;
+  width: 720px;
+  background-color: #FBB03B;
+  box-shadow: 0px 5px 10px #0000001A;
+  border-radius: 10px 10px 10px 10px;
+}
+
+.card-stance-white {
+  display: inline-block;
+  padding: 10px;
+  text-align: center;
+  width: 200px;
+  height: 150px;
+  background-color: #FFFFFF;
+  box-shadow: 0px 5px 10px #0000001A;
+  border-radius: 10px 10px 10px 10px;
+  color: #000000;
+  font-size: 14px;
+  font: normal normal bold 14px/21px Meiryo;
+}
+
+.card-message-fanction {
+  padding: 20px;
+  text-align: left;
+  width: 640px;
+  background-color: #FBB03B;
+  border-radius: 0px 50px 50px 50px;
+  font-size: 16px;
+  font: normal normal normal 16px/28px Meiryo;
+}
+
+.card-message-white {
+  padding: 20px;
+  text-align: left;
+  width: 640px;
+  background-color: #F7F7F7;
+  border-radius: 0px 50px 50px 50px;
+  font-size: 16px;
+  font: normal normal normal 16px/28px Meiryo;
+}
+
+/* ------------ポップアップ------------- */
+.pop-safe {
+  text-align: center;
+  padding: 13px;
+  width: 720px;
+  height: 50px;
+  background-color: #FBB03B;
+  border-radius: 5px 5px 5px 5px;
+}
+
+.pop-safe-font {
+  font-size: 16px;
+  color: #FFFFFF;
+  font: normal normal bold 16px/24px Meiryo;
+  opacity: 0.87;
+}
+
+.pop-error {
+  text-align: left;
+  padding: 13px 25px;
+  width: 720px;
+  height: 100%;
+  background-color: #FF0000;
+  border-radius: 5px 5px 5px 5px;
+}
+
+.pop-error-font {
+  font-size: 16px;
+  color: #FFFFFF;
+  font: normal normal bold 16px/24px Meiryo;
+  opacity: 0.87;
 }
 
 /* ------------Spacing------------- */
