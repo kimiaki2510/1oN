@@ -9,11 +9,15 @@
     </head>
     <body>
         @include('components.header')
-        <div id="app"></div>
+        <div class="app"></div>
         <h1>Tom</h1>
         @include('components.footer')
     </body>
     <script src="{{ mix('/js/index.js') }}"></script>
+
+    @push('scripts')
+        <script type="text/javascript" src="{{ mix('/js/index.js') }}" defer></script>
+    @endpush
 </html>
 
 

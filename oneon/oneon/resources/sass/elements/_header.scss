@@ -1,15 +1,18 @@
 /* header */@at-root
 
 .header-backendcolor {
+  z-index:10;
   background-color: #FFFFFF;
   height:80px;
   box-shadow: 5px 0 10px #0000001A;
   position: fixed;
   top: 0px;
   width: 100%;
+  display: flow-root;
 }
 
 .header-container {
+  z-index:10;
   display: flow-root;
   margin: 0 auto;
   width:960px;
