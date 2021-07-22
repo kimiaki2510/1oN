@@ -16,7 +16,6 @@ class EmployeeServices
 
   public function getSkillTags()
   {
-
     return DB::table('t_skill_tags')
       ->select(DB::raw('
         t_skill_tags.tag_group_code,

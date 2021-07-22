@@ -73,16 +73,16 @@
     <p style="font-size:26px;">card-background-white</p>
     <p>text text text text text text text text text text text text text text text text text text text text text text text text </p>
     <div>
-    <p class="tag-selected-cols">L'Arc-en-Ciel</p>
-    <p class="tag-selected-cols">青山テルマ</p>
-    <p class="tag-selected-cols">サザンオールスターズ</p>
-    <p class="tag-selected-cols">浜崎あゆみ</p>
-    <p class="tag-selected-cols">いきものがかり</p>
-    <p class="tag-selected-cols">AAA</p>
-    <p class="tag-selected-cols">AKB48</p>
-    <p class="tag-selected-cols">King Gnu</p>
-    <p class="tag-selected-cols">Da-iCE</p>
-    <p class="tag-selected-cols">ONE ON ROCK</p>
+    <p class="tag-selected-cols">L'Aジョエrgジェロイgジョアjrげjがおいえrgj；rjごあえrc-en-Ciel</p>
+    <p class="tag-selected-cols">青山李gじゃえいおgjテルマ</p>
+    <p class="tag-selected-cols">サザン自エロjごあオールスターズ</p>
+    <p class="tag-selected-cols">浜崎伊芸rjげpjgあゆみ</p>
+    <p class="tag-selected-cols">い医女絵jrgじゃものがかり</p>
+    <p class="tag-selected-cols">AゴエgジェrgえpjAA</p>
+    <p class="tag-selected-cols">AKジェイrjげjpじぇpB48</p>
+    <p class="tag-selected-cols">Kijpえjrgpjgng Gnu</p>
+    <p class="tag-selected-cols">Darぺごけpgk-iCE</p>
+    <p class="tag-selected-cols">ONけgpgkpE ON ROCK</p>
     <p class="tag-selected-cols">EXILE</p>
     <p class="tag-selected-cols">Official髭男dism</p>
     <p class="tag-selected-cols">三代目J SOUL BROTHERS</p>
@@ -92,7 +92,7 @@
     <p class="tag-selected-cols">ナオト・インティライミ</p>
     <p class="tag-selected-cols">安室奈美恵</p>
     <p class="tag-selected-cols">ゆず</p>
-    <p class="tag-selected-cols">Ed Sheeran</p>
+    <p class="tag-selected-cols">Ed Sコペrkgpkがpr毛pgkpgk絵prgj毛pskじょえgjそrgjそ；g徐えりjgそ；rjgせおrgじょえ；rjgそ；grジョセrgj青エリgじゃえおいrgj愛絵おrgj青英rgj青heeran</p>
   </div>
     <div class="btn-mg">
       <input type="text" class="form-input" placeholder="form-input">
@@ -140,8 +140,8 @@
     </div>
 
     <div class="card-message-white" style="margin-bottom:20px;">
-    <p style="#000000DE">card-message-white</p>
-      <p style="#000000DE">初めまして！部署移動で悩んでいます。いきたい部署があるんですがこのタイミングで新卒の育成をマネージャーから打診されてしまい、会社からの期待にも応えたいとは思いつつ、自分のやりたいことも明確にあります。一方でまだ若いので、自分のやりたいことはまだ今後でもいいのかな…？とも感じます。 モヤモヤして日頃の仕事に身が入りません。同年代としてぜひ相談させてください！</p>
+    <p style="">card-message-white</p>
+      <p style="">初めまして！部署移動で悩んでいます。いきたい部署があるんですがこのタイミングで新卒の育成をマネージャーから打診されてしまい、会社からの期待にも応えたいとは思いつつ、自分のやりたいことも明確にあります。一方でまだ若いので、自分のやりたいことはまだ今後でもいいのかな…？とも感じます。 モヤモヤして日頃の仕事に身が入りません。同年代としてぜひ相談させてください！</p>
     </div>
   </div>
 

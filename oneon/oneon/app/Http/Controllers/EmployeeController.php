@@ -12,7 +12,7 @@ class EmployeeController extends Controller
   
   /**
    * コンストラクタ作成
-   * @param EmployeeService
+   * @param EmployeeServices
    */
   public function __construct(EmployeeServices $employeeService)
   {

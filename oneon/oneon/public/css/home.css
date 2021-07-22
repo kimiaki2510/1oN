@@ -1,0 +1,113 @@
+.profile-container {
+  width: 195px;
+  margin-right: 23px;
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.main-container {
+  width: 720px;
+}
+
+.home-container {
+  display: flex;
+  margin-top: 120px;
+}
+
+.profile-image {
+  margin-bottom: 10px;
+}
+
+.profile-name {
+  font-size: 16px;
+  font: normal normal bold 16px/22px Noto Sans;
+  letter-spacing: 0px;
+  color: #000000DE;
+  margin: 0 0 5px 0;
+  padding: 0;
+}
+
+.department-container {
+  margin-bottom: 10px;
+}
+
+.profile-departmentTag {
+  font-size: 11px;
+  font: normal normal medium 11px/17px Noto Sans;
+  letter-spacing: 0px;
+  color: #00000061;
+  opacity: 1;
+  line-height: 16px;
+  margin: 0;
+  padding: 0;
+}
+
+.skilltag-container {
+  margin-bottom: 15px;
+}
+
+.profile-skillTag {
+  /* float:left; */
+  font-size: 11px;
+  color: #FBB03B;
+  background-color: #FFFFFF;
+  padding: 3px 13px;
+  line-height: 18px;
+  border: 1px solid #FBB03B;
+  border-radius: 30px 30px 30px 30px;
+  cursor: pointer;
+}
+
+.profile-count-container {
+  margin-bottom: 10px;
+}
+
+.profile-count {
+  font-size: 11px;
+  margin: 0 0 3px 0;
+  padding: 0;
+  line-height: 18px;
+  font: normal normal medium 11px/19px Noto Sans;
+  color: #000000DE;
+}
+
+.profile-num {
+  font-size: 20px;
+  font: normal normal bold 20px/19px Noto Sans;
+  color: #000000DE;
+  padding-left: 3px;
+}
+
+.profile-link {
+  font-size: 11px;
+  color: #FBB03B;
+  font: normal normal normal 11px/17px Meiryo;
+  margin: 0;
+  padding-left: -4px;
+}
+
+.profile-link:hover {
+  color: #FBB03B;
+  line-height: 16px;
+}
+
+.profile-icon {
+  margin-bottom: 2px;
+}
+
+.mentor-search-concept {
+  margin-bottom: 20px;
+}
+
+.mentor-btn {
+  box-shadow: 0px 3px 6px #00000029;
+}
+
+.mentor-btn:hover {
+  color: #FBB03B;
+}
+
+.image-hand {
+  margin-top: 40px;
+  width: 720px;
+}

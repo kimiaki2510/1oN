@@ -12,6 +12,18 @@
 
 /***/ }),
 
+/***/ "./resources/sass/pages/style.scss":
+/*!*****************************************!*\
+  !*** ./resources/sass/pages/style.scss ***!
+  \*****************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+// extracted by mini-css-extract-plugin
+
+
+/***/ }),
+
 /***/ "./resources/sass/app.scss":
 /*!*********************************!*\
   !*** ./resources/sass/app.scss ***!
@@ -36,10 +48,22 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
-/***/ "./resources/sass/pages/style.scss":
-/*!*****************************************!*\
-  !*** ./resources/sass/pages/style.scss ***!
-  \*****************************************/
+/***/ "./resources/sass/pages/home.scss":
+/*!****************************************!*\
+  !*** ./resources/sass/pages/home.scss ***!
+  \****************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+// extracted by mini-css-extract-plugin
+
+
+/***/ }),
+
+/***/ "./resources/sass/pages/matchingRequest.scss":
+/*!***************************************************!*\
+  !*** ./resources/sass/pages/matchingRequest.scss ***!
+  \***************************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 __webpack_require__.r(__webpack_exports__);
@@ -135,8 +159,10 @@ __webpack_require__.r(__webpack_exports__);
 /******/ 		var installedChunks = {
 /******/ 			"/js/department-accordion": 0,
 /******/ 			"css/app": 0,
-/******/ 			"css/style": 0,
-/******/ 			"css/employee": 0
+/******/ 			"css/matchingRequest": 0,
+/******/ 			"css/home": 0,
+/******/ 			"css/employee": 0,
+/******/ 			"css/style": 0
 /******/ 		};
 /******/ 		
 /******/ 		// no chunk on demand loading
@@ -184,10 +210,12 @@ __webpack_require__.r(__webpack_exports__);
 /******/ 	// startup
 /******/ 	// Load entry module and return exports
 /******/ 	// This entry module depends on other loaded chunks and execution need to be delayed
-/******/ 	__webpack_require__.O(undefined, ["css/app","css/style","css/employee"], () => (__webpack_require__("./resources/ts/department-accordion.tsx")))
-/******/ 	__webpack_require__.O(undefined, ["css/app","css/style","css/employee"], () => (__webpack_require__("./resources/sass/app.scss")))
-/******/ 	__webpack_require__.O(undefined, ["css/app","css/style","css/employee"], () => (__webpack_require__("./resources/sass/pages/employee.scss")))
-/******/ 	var __webpack_exports__ = __webpack_require__.O(undefined, ["css/app","css/style","css/employee"], () => (__webpack_require__("./resources/sass/pages/style.scss")))
+/******/ 	__webpack_require__.O(undefined, ["css/app","css/matchingRequest","css/home","css/employee","css/style"], () => (__webpack_require__("./resources/ts/department-accordion.tsx")))
+/******/ 	__webpack_require__.O(undefined, ["css/app","css/matchingRequest","css/home","css/employee","css/style"], () => (__webpack_require__("./resources/sass/app.scss")))
+/******/ 	__webpack_require__.O(undefined, ["css/app","css/matchingRequest","css/home","css/employee","css/style"], () => (__webpack_require__("./resources/sass/pages/employee.scss")))
+/******/ 	__webpack_require__.O(undefined, ["css/app","css/matchingRequest","css/home","css/employee","css/style"], () => (__webpack_require__("./resources/sass/pages/home.scss")))
+/******/ 	__webpack_require__.O(undefined, ["css/app","css/matchingRequest","css/home","css/employee","css/style"], () => (__webpack_require__("./resources/sass/pages/matchingRequest.scss")))
+/******/ 	var __webpack_exports__ = __webpack_require__.O(undefined, ["css/app","css/matchingRequest","css/home","css/employee","css/style"], () => (__webpack_require__("./resources/sass/pages/style.scss")))
 /******/ 	__webpack_exports__ = __webpack_require__.O(__webpack_exports__);
 /******/ 	
 /******/ })()

@@ -26,3 +26,5 @@ Route::get('/regist', 'EmployeeController@definitiveRegist')->name('definitive-r
 Route::post('/regist/execute', 'EmployeeController@definitiveExecute')->name('definitive-execute');
 Route::get('/employee/update', 'EmployeeController@update')->name('employee.update');
 Route::post('/employee/update/execute', 'EmployeeController@updateExecute')->name('employee.update.execute');
+Route::get('/matching/request', 'MatchingController@matchingRequest')->name('matching.request');
+Route::post('/matching/search', 'MatchingController@matchingSearchExecute')->name('matching.search.execute');
