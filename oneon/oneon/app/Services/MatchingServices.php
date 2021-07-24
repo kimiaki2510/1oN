@@ -7,6 +7,8 @@ use Illuminate\Support\Facades\DB;
 use Illuminate\Http\Request;
 use App\Models\SkillTags;
 use App\Services\EmployeeServices;
+use DateInterval;
+use Carbon\Carbon;
 
 class MatchingServices
 {
@@ -107,6 +109,29 @@ class MatchingServices
       $matchingUsersInfo[$i]['job_past_code'] = preg_split('/[,]/', $matchingUsersInfo[$i]['job_past_code']);
     }
     return $matchingUsersInfo;
+  }
+
+  public function createMatchingHistory($menteeOneonId, $mentorOneonId, $hopeStance, $menteeMessage)
+  {
+    $time = new Carbon(Carbon::now());
+    $autoRejectExpireDate = date_create($time->addDay(3));
+
+    $insertData = [];
+    $matchingStatus = 1016000;
+    for ($i=0; $i < count($mentorOneonId); $i++) {
+      array_push($insertData, ['t_matching_histories.mentee_oneon_id' => $menteeOneonId, 't_matching_histories.mentor_oneon_id' => $mentorOneonId[$i] , 't_matching_histories.hope_stance' => $hopeStance, 't_matching_histories.mentee_message' => $menteeMessage, 't_matching_histories.matching_status' => $matchingStatus, 't_matching_histories.auto_reject_expire_date' =>  $autoRejectExpireDate  ,'created_at' => NOW(), 'updated_at' => NOW()]);
+    }
+
+    DB::table('t_matching_histories')
+      ->insert($insertData);
+  }
+
+  public function createTagsSearchHistory($oneonId, $selectSkillTags, $selectCurrentDepartmentTags, $selectCurrentJob, $selectPastDepartmentTags, $selectPastJob)
+  {
+    DB::table('t_tag_search_histories')
+      ->insert(
+        ['t_tag_search_histories.oneon_id' => $oneonId, 't_tag_search_histories.tag_code' => $selectSkillTags, 't_tag_search_histories.department_current_code' => $selectCurrentDepartmentTags , 't_tag_search_histories.job_current_code' => $selectCurrentJob , 't_tag_search_histories.department_past_code' => $selectPastDepartmentTags, 't_tag_search_histories.job_past_code' => $selectPastJob ,'created_at' => NOW(), 'updated_at' => NOW()]
+      );
   }
 
 

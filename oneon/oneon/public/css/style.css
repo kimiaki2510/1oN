@@ -383,10 +383,12 @@ ul.navbar-nav > li > a:focus {
 .row-carousel {
   margin: 0 45px 0 45px;
 }
+
 @media (min-width: 768px) {
   .row-carousel .text-adjusted {
     text-align: left;
   }
+
   .row-carousel .date-adjusted {
     text-align: right;
   }
@@ -401,7 +403,6 @@ ul.navbar-nav > li > a:focus {
     margin: 0 45px 0 45px;
   }
 }
-
 .limited-height {
   height: 25px;
 }

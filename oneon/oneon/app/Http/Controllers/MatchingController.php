@@ -23,7 +23,7 @@ class MatchingController extends Controller
     $this->commonService = $commonService;
   }
 
-  public function matchingRequest() {
+  public function matchingRequest(Request $request) {
     //変数宣言
     $allSkills = [];
     $tmpSkill = [];
@@ -68,7 +68,7 @@ class MatchingController extends Controller
   }
 
   public function matchingSearchExecute(Request $request) {
-    //dd($request);
+    // dd($request);
     // ONEONを取得
     // $oneonId = Auth::user()->oneon_id;
     $oneonId = 1000000001;
@@ -104,10 +104,42 @@ class MatchingController extends Controller
       }
     }
 
-    //dd($matchingUsersInfo);
+    $this->information['request'] = $request->all();
     $this->information['matchingUsersInfo'] = $matchingUsersInfo;
     $this->information['selectStance'] = $selectStance;
     return view('pages.matching.mentor-search', $this->information);
+  }
+
+  public function matchingRequestExecute(Request $request) {
+    //dd($request->selectDatas);
+    if (strcmp($request->back, "back") == 0) {
+      $input = $request->all();
+      return redirect()->route('matching.request', $request->all());
+    }
+
+    // ONEONを取得
+    // $oneonId = Auth::user()->oneon_id;
+    $menteeOneonId = 1000000001;
+    if (empty($menteeOneonId)) {
+      throw new UnprocessableEntityHttpException("Unprocessable Entity Excetion");
+    }
+    $mentorOneonId = $request->matchOneonId;
+    $stance = $request->selectDatas['stance'];
+    $menteeMessage = $request->messageText;
+    $hopeStance = $this->commonService->getJoinParameter($stance);
+    //検索したタグ情報を取得
+    $selectSkillTags = $this->commonService->getJoinParameter($request->selectDatas['skillTags']);
+    $selectCurrentDepartmentTags = $this->commonService->getJoinParameter($request->selectDatas['currentDepartmentTags']);
+    $selectCurrentJob = $this->commonService->getJoinParameter($request->selectDatas['currentJob']);
+    $selectPastDepartmentTags = $this->commonService->getJoinParameter($request->selectDatas['pastDepartmentTags']);
+    $selectPastJob = $this->commonService->getJoinParameter($request->selectDatas['pastJob']);
+    
+    //マッチング履歴を作成
+    $this->matchingService->createMatchingHistory($menteeOneonId, $mentorOneonId, $hopeStance, $menteeMessage);
+    //タグ検索履歴を作成
+    $this->matchingService->createTagsSearchHistory($menteeOneonId, $selectSkillTags, $selectCurrentDepartmentTags, $selectCurrentJob, $selectPastDepartmentTags, $selectPastJob);
+
+    return redirect()->route('home', []);
   }
 
 }

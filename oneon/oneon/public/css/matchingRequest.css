@@ -232,12 +232,11 @@
   left: 170px;
 }
 
-
 /* メンター選択画面 */
 .mentor-search-group {
-  width: 200px;
+  width: 190px;
   margin: 0px 5px 44px 5px;
-  display: inline-block; 
+  display: inline-block;
   vertical-align: top;
 }
 
@@ -269,8 +268,8 @@
 }
 
 p {
-  padding:0px;
-  margin:0px;
+  padding: 0px;
+  margin: 0px;
 }
 
 .mentor-search-tag {
@@ -291,23 +290,34 @@ p {
   margin-bottom: 30px;
 }
 
-.mentor-search-message p{
+.mentor-search-message p {
   font-size: 14px;
   text-align: left;
   font: normal normal bold 14px/21px Meiryo;
   margin-left: 80px;
 }
 
-.btn-primary-L {
+.btn-primary-L-mg-bottom {
+  margin-bottom: 5px;
+}
+
+/* montorモーダル */
+.madal-red {
+  cursor: pointer;
+}
+
+.mentor-display {
   display: inline-block;
-  font-size: 20px;
-  font: normal normal bold 20px/30px Meiryo;
-  color: #FFFFFF;
-  background-color: #FBB03B;
-  width: 320px;
-  line-height: 60px;
-  text-align: center;
-  margin-bottom: 10px;
-  border: 1px solid #FBB03B;
-  border-radius: 30px 30px 30px 30px;
+}
+
+.mentor-display-none {
+  display: none;
+}
+
+.modal-title {
+  margin-bottom: 30px;
+}
+
+.modal-montee-message {
+  margin-bottom: 40px;
 }

@@ -75,6 +75,13 @@ class CommonServices
     return $resultArray;
   }
 
+  public function getJoinParameter($array)
+  {
+    if ($array != null) {
+      return join(',', $array);
+    }
+    return NULL;
+  }
 
 
 }
