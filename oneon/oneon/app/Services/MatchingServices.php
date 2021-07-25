@@ -113,13 +113,15 @@ class MatchingServices
 
   public function createMatchingHistory($menteeOneonId, $mentorOneonId, $hopeStance, $menteeMessage)
   {
-    $time = new Carbon(Carbon::now());
-    $autoRejectExpireDate = date_create($time->addDay(3));
+    $autoReject = new Carbon(Carbon::now());
+    $autoHide = new Carbon(Carbon::now());
+    $autoRejectExpireDate = date_create($autoReject->addDay(3));
+    $autoHideExpireDate = date_create($autoHide->addDay(5));
 
     $insertData = [];
     $matchingStatus = 1016000;
     for ($i=0; $i < count($mentorOneonId); $i++) {
-      array_push($insertData, ['t_matching_histories.mentee_oneon_id' => $menteeOneonId, 't_matching_histories.mentor_oneon_id' => $mentorOneonId[$i] , 't_matching_histories.hope_stance' => $hopeStance, 't_matching_histories.mentee_message' => $menteeMessage, 't_matching_histories.matching_status' => $matchingStatus, 't_matching_histories.auto_reject_expire_date' =>  $autoRejectExpireDate  ,'created_at' => NOW(), 'updated_at' => NOW()]);
+      array_push($insertData, ['t_matching_histories.mentee_oneon_id' => $menteeOneonId, 't_matching_histories.mentor_oneon_id' => $mentorOneonId[$i] , 't_matching_histories.hope_stance' => $hopeStance, 't_matching_histories.mentee_message' => $menteeMessage, 't_matching_histories.matching_status' => $matchingStatus, 't_matching_histories.auto_reject_expire_date' =>  $autoRejectExpireDate, 't_matching_histories.auto_hide_expire_date' => $autoHideExpireDate,'created_at' => NOW(), 'updated_at' => NOW()]);
     }
 
     DB::table('t_matching_histories')

@@ -65,6 +65,19 @@ class CommonServices
     return $result;
   }
 
+  public function getOneonStanceNames($stance_code)
+  {
+    return DB::table('m_codes')
+    ->select(DB::raw('
+      m_codes.code_name
+    '))
+    ->whereRaw("
+      m_codes.deleted_flag <> 1
+      AND m_codes.code IN ($stance_code)
+    ")
+    ->get();
+  }
+
   public function arrayArrange($array, $code_name) {
     $resultArray = [];
 

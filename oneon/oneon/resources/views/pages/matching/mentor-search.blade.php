@@ -14,18 +14,8 @@
   <div>
   <div class="">
       <div class="card-background-white card-background-white-mg">
-      <!-- <form method="POST" action="/matching/request/execute"> -->
       <form method="POST" action="{{ route('matching.search.execute', ['selectDatas' => $request]) }}">
         @csrf
-
-        <!-- <div>
-          @foreach ($selectStance as $stance)
-            <input type="hidden" name="stance[]" value="{{ $stance }}">
-          @endforeach
-          @foreach ($request['skillTags'] as $skillTags)
-            <input type="hidden" name="skillTags[]" value="{{ $skillTags }}">
-          @endforeach
-        </div> -->
 
         <h3 class="mentor-search-title">あなたにマッチングしたメンター</h3>
         <p class="mentor-search-comment">気になったメンターにチェックを入れて、1oNを申請しましょう！</p>
@@ -120,7 +110,7 @@
       var replaced = message.replace(/\n/g, '<br>');
       console.log(replaced);
       modalMessage.textContent = replaced;
-  
+
       var elements = document.getElementsByClassName('stance-input-checkbox');
       var modalUser = document.getElementsByClassName('modal-search-group');
       for (let step = 0; step < elements.length; step++) {

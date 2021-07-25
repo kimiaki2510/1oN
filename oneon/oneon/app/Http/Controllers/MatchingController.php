@@ -128,12 +128,12 @@ class MatchingController extends Controller
     $menteeMessage = $request->messageText;
     $hopeStance = $this->commonService->getJoinParameter($stance);
     //検索したタグ情報を取得
-    $selectSkillTags = $this->commonService->getJoinParameter($request->selectDatas['skillTags']);
-    $selectCurrentDepartmentTags = $this->commonService->getJoinParameter($request->selectDatas['currentDepartmentTags']);
-    $selectCurrentJob = $this->commonService->getJoinParameter($request->selectDatas['currentJob']);
-    $selectPastDepartmentTags = $this->commonService->getJoinParameter($request->selectDatas['pastDepartmentTags']);
-    $selectPastJob = $this->commonService->getJoinParameter($request->selectDatas['pastJob']);
-    
+    $selectSkillTags = $this->commonService->getJoinParameter( !empty($request->selectDatas['skillTags']) ? $request->selectDatas['skillTags'] : NULL);
+    $selectCurrentDepartmentTags = $this->commonService->getJoinParameter( !empty($request->selectDatas['currentDepartmentTags']) ? $request->selectDatas['currentDepartmentTags'] : NULL);
+    $selectCurrentJob = $this->commonService->getJoinParameter( !empty($request->selectDatas['currentJob']) ? $request->selectDatas['currentJob'] : NULL);
+    $selectPastDepartmentTags = $this->commonService->getJoinParameter( !empty($request->selectDatas['pastDepartmentTags']) ? $request->selectDatas['pastDepartmentTags'] : NULL);
+    $selectPastJob = $this->commonService->getJoinParameter( !empty($request->selectDatas['pastJob']) ? $request->selectDatas['pastJob'] : NULL);
+        
     //マッチング履歴を作成
     $this->matchingService->createMatchingHistory($menteeOneonId, $mentorOneonId, $hopeStance, $menteeMessage);
     //タグ検索履歴を作成

@@ -321,3 +321,73 @@ p {
 .modal-montee-message {
   margin-bottom: 40px;
 }
+
+/* メンター申請受付 */
+.matching-reception-title {
+  font-size: 24px;
+  font: normal normal bold 24px/36px Meiryo;
+  letter-spacing: 0px;
+  color: #000000;
+  margin-bottom: 30px;
+}
+
+.mentee-reception-image-group {
+  display: inline-block;
+  width: 60px;
+  vertical-align: top;
+  margin-right: 10px;
+}
+
+.mentee-reception-info-group {
+  display: inline-block;
+  width: 530px;
+  text-align: left;
+  vertical-align: top;
+  margin-bottom: 25px;
+}
+
+.matching-reception-name {
+  font-size: 16px;
+  font: normal normal bold 16px/22px Noto Sans;
+  letter-spacing: 0px;
+  color: #000000DE;
+  margin-bottom: 6px;
+}
+
+.reception-current-department {
+  font-size: 10px;
+  font: normal normal medium 10px/15px Noto Sans;
+  letter-spacing: 0px;
+  color: #00000061;
+  line-height: 15px;
+}
+
+.reception-current-department-container {
+  margin-bottom: 6px;
+}
+
+.reception-current-department-container p {
+  padding: 0px;
+  margin: 0px;
+}
+
+.matching-reception-message {
+  margin-bottom: 40px;
+}
+
+.matching-reception-group {
+  display: inline-block;
+  margin-bottom: 30px;
+}
+
+.reception-stance-title {
+  font-size: 16px;
+  font: normal normal bold 16px/22px Noto Sans;
+  letter-spacing: 0px;
+  color: #000000DE;
+  margin-bottom: 20px;
+}
+
+.reception-stance {
+  margin-bottom: 20px;
+}

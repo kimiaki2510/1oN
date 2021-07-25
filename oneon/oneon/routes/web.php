@@ -29,3 +29,5 @@ Route::post('/employee/update/execute', 'EmployeeController@updateExecute')->nam
 Route::get('/matching/request', 'MatchingController@matchingRequest')->name('matching.request');
 Route::post('/matching/search', 'MatchingController@matchingSearchExecute')->name('matching.search.execute');
 Route::post('/matching/request/execute', 'MatchingController@matchingRequestExecute')->name('matching.search.execute');
+Route::post('/matching/reception', 'MatchingReceptionController@reception')->name('matching.reception');
+Route::post('/matching/reception/execute', 'MatchingReceptionController@receptionExecute')->name('matching.reception.execute');
