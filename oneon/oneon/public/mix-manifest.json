@@ -1,9 +1,10 @@
 {
-    "/js/department-accordion.js": "/js/department-accordion.js?id=0ae5c882bcab9995634a",
+    "/js/department-accordion.js": "/js/department-accordion.js?id=aeb3f33d7d5167e634a1",
     "/js/index.js": "/js/index.js?id=6d51ece4fbdd98f51c86",
     "/css/app.css": "/css/app.css?id=5bb3871b62a466ba0304",
-    "/css/matchingRequest.css": "/css/matchingRequest.css?id=7d2c22b542ea36d7ae65",
+    "/css/matchingDetails.css": "/css/matchingDetails.css?id=cb8e3cef9604cd97d635",
     "/css/home.css": "/css/home.css?id=4160142eddf1a8f1004e",
     "/css/employee.css": "/css/employee.css?id=a7c9464a716434068489",
-    "/css/style.css": "/css/style.css?id=a12aacc8b00303d1542c"
+    "/css/style.css": "/css/style.css?id=a12aacc8b00303d1542c",
+    "/css/matchingRequest.css": "/css/matchingRequest.css?id=f22c2aa7457070bb6cbe"
 }

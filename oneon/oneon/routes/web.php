@@ -31,3 +31,7 @@ Route::post('/matching/search', 'MatchingController@matchingSearchExecute')->nam
 Route::post('/matching/request/execute', 'MatchingController@matchingRequestExecute')->name('matching.search.execute');
 Route::post('/matching/reception', 'MatchingReceptionController@reception')->name('matching.reception');
 Route::post('/matching/reception/execute', 'MatchingReceptionController@receptionExecute')->name('matching.reception.execute');
+Route::get('/matchingDetails', function() {
+    return view('pages/matching/matchingDetails1onCompletion');
+});
+Route::get('/matching', 'MatchingDetails1onCompletionController@init');
