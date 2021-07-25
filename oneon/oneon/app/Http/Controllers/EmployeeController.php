@@ -4,19 +4,23 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Services\EmployeeServices;
+use App\Services\CommonServices;
 use Symfony\Component\HttpKernel\Exception\UnprocessableEntityHttpException;
 
 class EmployeeController extends Controller
 {
   protected $employeeService;
+  protected $commonService;
   
   /**
    * コンストラクタ作成
    * @param EmployeeServices
+   * @param CommonServices
    */
-  public function __construct(EmployeeServices $employeeService)
+  public function __construct(EmployeeServices $employeeService, CommonServices $commonService)
   {
     $this->employeeService = $employeeService;
+    $this->commonService = $commonService;
   }
 
   //会員登録
@@ -166,6 +170,11 @@ class EmployeeController extends Controller
 
     //社員タグテーブルを作成
     $this->employeeService->updateEmployeeTags($oneonId, $currentDepartmentTags, $pastDepartmentTags, $currentJob ,$pastJob ,$skillTags); 
+
+    //履歴情報登録
+    // $result = $this->employeeService->employeeInformation($oneonId);
+    // $this->employeeService->historyCreatee($result);
+    $this->commonService->createEmployeeHistory($oneonId);
 
     //社員テーブルを更新
     $this->employeeService->updateEmployee($oneonId, $sex);

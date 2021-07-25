@@ -192,9 +192,5 @@ class EmployeeServices
 
     DB::table('t_employee_tags')
       ->where('oneon_id', $oneonId)->increment('version');
-
   }
-
-
-
 }

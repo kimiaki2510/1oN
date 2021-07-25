@@ -97,5 +97,64 @@ class CommonServices
     return NULL;
   }
 
+    //社員履歴登録処理
+    public function createEmployeeHistory($oneonId)
+    {
+      $employeeInformation = $this->employeeInformation($oneonId);
+      DB::table('t_employee_histories')
+      ->insert(
+        [
+        'oneon_id' => $employeeInformation->oneon_id
+        , 'employee_number' => $employeeInformation->employee_number
+        , 'last_name' => $employeeInformation->last_name
+        , 'first_name' => $employeeInformation->first_name
+        , 'sex' => $employeeInformation->sex
+        , 'authority_status' => $employeeInformation->authority_status
+        , 'member_status' => $employeeInformation->member_status
+        , 'oneon_temporary_admission_date' => $employeeInformation->oneon_temporary_admission_date
+        , 'oneon_admission_date' => $employeeInformation->oneon_admission_date
+        , 'temporary_expire_date' => $employeeInformation->temporary_expire_date
+        , 'one_time_password_expire_date' => $employeeInformation->one_time_password_expire_date
+        , 'mail_address_temporary' => $employeeInformation->mail_address_temporary
+        , 'mail_address' => $employeeInformation->mail_address
+        , 'mentee_times' => $employeeInformation->mentee_times
+        , 'mentor_times' => $employeeInformation->mentor_times
+        , 'withdrawal_at' => $employeeInformation->withdrawal_at
+        , 'destination_designation_flag' => $employeeInformation->destination_designation_flag
+        , 'deleted_flag' => $employeeInformation->deleted_flag
+        , 'created_at' => NOW()
+        , 'updated_at' => NOW()]
+      );
+    }
+  
+  
+    public function employeeInformation($oneonId)
+    {
+      return DB::table('t_employees')
+        ->select(DB::raw('
+        employee_id
+        ,oneon_id
+        ,employee_number
+        ,last_name
+        ,first_name
+        ,sex
+        ,authority_status
+        ,member_status
+        ,oneon_temporary_admission_date
+        ,oneon_admission_date
+        ,temporary_expire_date
+        ,one_time_password_expire_date
+        ,mail_address_temporary
+        ,mail_address
+        ,mentee_times
+        ,mentor_times
+        ,withdrawal_at
+        ,destination_designation_flag
+        ,deleted_flag
+        ,version
+        '))
+        ->first();
+    }
+
 
 }
