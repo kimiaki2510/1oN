@@ -101,6 +101,7 @@ class CommonServices
     public function createEmployeeHistory($oneonId)
     {
       $employeeInformation = $this->employeeInformation($oneonId);
+      
       DB::table('t_employee_histories')
       ->insert(
         [
