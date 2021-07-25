@@ -1,5 +1,26 @@
 @charset "UTF-8";
+.card-background-white {
+  margin: auto;
+  text-align: center;
+}
+
+.card-background-white {
+  margin: auto;
+  text-align: center;
+  width: 720px;
+  background: white 0% 0% no-repeat padding-box;
+  box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  opacity: 1;
+}
+
+.content-container {
+  margin-top: 120px;
+}
+
 .profile-container {
+  display: inline-block;
+  vertical-align: top;
   width: 195px;
   margin-right: 23px;
   text-align: center;
@@ -7,12 +28,16 @@
 }
 
 .main-container {
+  display: inline-block;
+  vertical-align: top;
   width: 720px;
 }
 
 .home-container {
-  display: flex;
-  margin-top: 120px;
+  /* display: flex;
+  margin-top: 120px; */
+  margin: auto;
+  text-align: center;
 }
 
 .profile-image {
@@ -108,6 +133,10 @@
   color: #FBB03B;
 }
 
+.btn-hover:hover {
+  color: #FBB03B;
+}
+
 .image-hand {
   margin-top: 40px;
   width: 720px;
@@ -117,6 +146,7 @@
 .card-mg-30 {
   margin-bottom: 30px;
 }
+
 .card-background-white-match {
   padding: 40px;
   text-align: center;
@@ -125,6 +155,16 @@
   background-color: #FFFFFF;
   box-shadow: 0px 5px 10px #0000001A;
   border: 10px solid #FBB03B;
+  border-radius: 10px 10px 10px 10px;
+}
+
+.card-background-not-match {
+  padding: 40px;
+  text-align: center;
+  width: 720px;
+  height: 100%;
+  background-color: #EFEFEF;
+  box-shadow: 0px 5px 10px #0000001A;
   border-radius: 10px 10px 10px 10px;
 }
 
@@ -143,7 +183,7 @@
   font: normal normal bold 24px/36px Meiryo;
   letter-spacing: 0px;
   color: #000000;
-  padding:0px;
+  padding: 0px;
   margin-bottom: 5px;
 }
 
@@ -168,9 +208,38 @@
   width: 150px;
   text-align: center;
   margin-top: 15px;
-  margin-bottom: 15px;
+  margin-bottom: 10px;
 }
 
 .menteeRequest-image {
   margin-bottom: 10px;
+}
+
+.menteeUser-group {
+  display: inline-block;
+  vertical-align: top;
+  width: 90px;
+}
+
+.menteeUser-message-group {
+  display: inline-block;
+  vertical-align: top;
+  width: 520px;
+  /* padding: 20px; */
+}
+
+.menteeUser-container {
+  margin-top: 15px;
+  margin-bottom: 10px;
+}
+
+.home-card-mentee-message {
+  text-align: left;
+}
+
+.home-card-notMatch-message {
+  font-size: 11px;
+  font: normal normal normal 11px/17px Meiryo;
+  color: #FF0000;
+  margin-bottom: 25px;
 }

@@ -12,8 +12,8 @@
 
 @section('body')
   <div>
-  <div class="">
-      <div class="card-background-white card-background-white-mg">
+  <div class="content-container">
+      <div class="card-background-white">
       <form method="POST" action="{{ route('matching.search.execute', ['selectDatas' => $request]) }}">
         @csrf
 

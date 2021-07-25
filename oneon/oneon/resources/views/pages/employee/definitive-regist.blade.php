@@ -10,8 +10,8 @@
 
 @section('body')
   <div class="">
-    <div class="card-center">
-      <div class="card-background-white card-background-white-mg">
+    <div class="content-container">
+      <div class="card-background-white">
         
       <form method="POST" action="/regist/execute">
         @csrf
