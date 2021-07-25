@@ -14,6 +14,7 @@
 <!-- aタグのリンク先 -->
 <!-- ユーザ画像 -->
 <!-- ログインユーザid -->
+
   <div class="card-background-white" style="text-align: center;">
     <h1 id="actionTitle" class="actionTitle">1oN成立</h1>
     <p id="actionMessage" class="actionMessage">メンターとマッチングしました。当日になったら1on1を開始しましょう!当日の流れは<a class="link" href="#">こちら</a></p>
