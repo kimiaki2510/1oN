@@ -89,9 +89,25 @@ class MatchingReceptionServices
 
     DB::table('t_matching_histories')
       ->where('matching_history_id', $matchingHistoryId)->increment('version');
+  }
 
+  public function getOneonIdByMatchingHistoryId($matchingHistoryId)
+  {
+    return DB::table('t_matching_histories')
+    ->where('t_matching_histories.matching_history_id', $matchingHistoryId)
+    ->select(DB::raw('
+      mentee_oneon_id as menteeOneonId,
+      mentor_oneon_id as mentorOneonId
+    '))
+    ->first();
+  }
 
-
+  public function updateMatchCountUp($menteeOneonId, $mentorOneonId)
+  {
+    DB::table('t_employees')
+      ->where('oneon_id', $menteeOneonId)->increment('mentee_times', 1, ['updated_at' => NOW()]);
+    DB::table('t_employees')
+      ->where('oneon_id', $mentorOneonId)->increment('mentor_times', 1, ['updated_at' => NOW()]);
   }
 
 

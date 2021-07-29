@@ -11,13 +11,13 @@
 @section('body')
   <div class="">
     <div class="content-container">
+      @include('components.header_error')
+ 
       <div class="card-background-white">
-        
       <form method="POST" action="/regist/execute">
         @csrf
         <div class="regist-content-item current-info">
           <h3 class="select-comment">現在のあなたについて教えてください</h3>
-          
           <div class="department-container">
             <h4 class="select-title">部署名 <span class="required">※必須（複数選択可）</span></h4>
             <div class="department-group">
@@ -167,7 +167,7 @@
         </div>
 
         <div class="regist-content-item skilltag-info">
-          <h3 class="select-comment">あなたに当てはまるタグを選びましょう <span class="required">※必須（1つ以上選択）</span></h3>
+          <h3 class="select-comment">自分自身を表すタグを選びましょう <span class="required">※必須（1つ以上選択）</span></h3>
             <div class="skilltag-group">
               <h4 class="select-title">性別<span class="arbitrarily">※任意</span></h4>
               <div class="skilltags">
@@ -205,10 +205,8 @@
 　<script>
   $(function () {
     $(document).on('click', '.form-text-field-all .submit_button', function () {
-      
       /* フォームのすべての値を取得する方法 */
       var data = $(this).closest('form').serialize();
-      
       alert(data);
     });
   });

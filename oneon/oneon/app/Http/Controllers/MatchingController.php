@@ -6,6 +6,8 @@ use Illuminate\Http\Request;
 use App\Services\CommonServices;
 use App\Services\EmployeeServices;
 use App\Services\MatchingServices;
+use App\Http\Requests\MatchingSearchRequest;
+use App\Http\Requests\MatchingExecuteRequest;
 use Symfony\Component\HttpKernel\Exception\UnprocessableEntityHttpException;
 
 class MatchingController extends Controller
@@ -24,11 +26,22 @@ class MatchingController extends Controller
   }
 
   public function matchingRequest(Request $request) {
+    $data = json_decode(json_encode($request['selectDatas']), true);
+    //dd($data);
+
     //変数宣言
     $allSkills = [];
     $tmpSkill = [];
     $allDepartments = [];
     $tmpDepartment = [];
+
+    $oldStance = !empty($data['stance']) ? $data['stance'] : [NULL];
+    $oldSkillTags = !empty($data['skillTags']) ? $data['skillTags'] : [NULL];
+    $oldcurrentDepartmentTags = !empty($data['currentDepartmentTags']) ? $data['currentDepartmentTags'] : [NULL];
+    $oldcurrentJob = !empty($data['currentJob']) ? $data['currentJob'] : [NULL];
+    $oldpastDepartmentTags = !empty($data['pastDepartmentTags']) ? $data['pastDepartmentTags'] : [NULL];
+    $oldpastJob = !empty($data['pastJob']) ? $data['pastJob'] : [NULL];
+    //dd($oldpastJob);
 
     //スキルタグ取得
     $allSkillTags = $this->employeeService->getSkillTags();
@@ -64,11 +77,17 @@ class MatchingController extends Controller
   
     $this->information['skills'] = $allSkills;
     $this->information['departments'] = $allDepartments;
+    $this->information['oldStance'] = $oldStance;
+    $this->information['oldSkillTags'] = $oldSkillTags;
+    $this->information['oldcurrentDepartmentTags'] = $oldcurrentDepartmentTags;
+    $this->information['oldcurrentJob'] = $oldcurrentJob;
+    $this->information['oldpastDepartmentTags'] = $oldpastDepartmentTags;
+    $this->information['oldpastJob'] = $oldpastJob;
     return view('pages.matching.matching-request', $this->information);
   }
 
-  public function matchingSearchExecute(Request $request) {
-    // dd($request);
+  public function matchingSearchExecute(MatchingSearchRequest $request) {
+    //dd($request->all());
     // ONEONを取得
     // $oneonId = Auth::user()->oneon_id;
     $oneonId = 1000000001;
@@ -111,9 +130,10 @@ class MatchingController extends Controller
   }
 
   public function matchingRequestExecute(Request $request) {
-    //dd($request->selectDatas);
+    //dd($request->all());
     if (strcmp($request->back, "back") == 0) {
       $input = $request->all();
+      //dd($request->all());
       return redirect()->route('matching.request', $request->all());
     }
 

@@ -1,5 +1,7 @@
 <?php
 
+use Illuminate\Support\Facades\Route;
+use Illuminate\Auth;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -19,7 +21,15 @@ Route::get('/test', function() {
     return view('test');
 });
 
-Auth::routes();
+Route::get('/error', function() {
+    return view('errors.404');
+});
+
+Route::get('/session', function() {
+    return view('errors.sessionTimeout');
+});
+
+// Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 Route::get('/regist', 'EmployeeController@definitiveRegist')->name('definitive-regist');
@@ -31,10 +41,7 @@ Route::post('/matching/search', 'MatchingController@matchingSearchExecute')->nam
 Route::post('/matching/request/execute', 'MatchingController@matchingRequestExecute')->name('matching.search.execute');
 Route::post('/matching/reception', 'MatchingReceptionController@reception')->name('matching.reception');
 Route::post('/matching/reception/execute', 'MatchingReceptionController@receptionExecute')->name('matching.reception.execute');
+Route::get('/matchingDetails', 'MatchingDetails1onCompletionController@init')->name('matching.detail.init');
+Route::get('/password/change', 'PasswordController@changePassword')->name('password.change');
 
-Route::post('/matchingDetails', 'MatchingDetails1onCompletionController@init')->name('matching.detail.init');
-
-// Route::get('/matchingDetails', function() {
-//     return view('pages/matching/matchingDetails1onCompletion');
-// });
-// Route::get('/matching', 'MatchingDetails1onCompletionController@init')->name('matching.detail.init');
+Route::get('/password/reset', 'PasswordController@resetPassword')->name('password.reset');

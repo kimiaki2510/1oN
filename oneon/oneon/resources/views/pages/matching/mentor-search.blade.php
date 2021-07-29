@@ -1,5 +1,12 @@
 @php
-  $title = '1oN | 会員登録';
+  $title = '1oN | メンター選択';
+  $text = "
+下記について相談したく、お時間いただけると嬉しいです！
+
+・話したいことの詳細
+・抱えているモヤモヤ　など
+
+よろしくお願いいたします！"
 @endphp
 @section('title', $title)
 
@@ -12,7 +19,8 @@
 
 @section('body')
   <div>
-  <div class="content-container">
+    <div class="content-container">
+      @include('components.header_error')
       <div class="card-background-white">
       <form method="POST" action="{{ route('matching.search.execute', ['selectDatas' => $request]) }}">
         @csrf
@@ -49,7 +57,7 @@
 
           <div class="mentor-search-message">
             <p>メッセージ</p>
-            <textarea id="mentee-message" class="form-textarea-long" name="messageText"></textarea>
+            <textarea id="mentee-message" class="form-textarea-long" name="messageText">{{ $text }}</textarea>
           </div>
 
           <button id="text-button" type="button" class="btn-primary-L btn-primary-L-mg-bottom" data-toggle="modal" data-target="#sampleModal">申請</button>
@@ -107,7 +115,7 @@
       var menteeMessage = document.getElementById('mentee-message');
       var modalMessage = document.getElementById('model-message');
       var message = menteeMessage.value;
-      var replaced = message.replace(/\n/g, '<br>');
+      var replaced = message.replace(/\n/g, '\n');
       console.log(replaced);
       modalMessage.textContent = replaced;
 

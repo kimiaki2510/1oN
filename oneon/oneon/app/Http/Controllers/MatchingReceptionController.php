@@ -56,7 +56,6 @@ class MatchingReceptionController extends Controller
   }
 
   public function receptionExecute(Request $request) {
-     //dd($request);
 
     $matchingHistoryId = $request['matchingHistoryId'];
     $receptionMentorMessage = $request['receptionMessageText'];
@@ -69,9 +68,21 @@ class MatchingReceptionController extends Controller
     }
 
     //メンターを受ける場合
-    $this->matchingReceptionService->updateMatchReception($matchingHistoryId, $receptionMentorMessage);
-    return redirect()->route('home', []);
+    $oneonIds = $this->matchingReceptionService->getOneonIdByMatchingHistoryId($matchingHistoryId);
 
+    //履歴情報登録
+    $this->commonService->createEmployeeHistory($oneonIds->menteeOneonId);
+    $this->commonService->createEmployeeHistory($oneonIds->mentorOneonId);
+
+    $this->matchingReceptionService->updateMatchCountUp($oneonIds->menteeOneonId, $oneonIds->mentorOneonId);
+    $this->matchingReceptionService->updateMatchReception($matchingHistoryId, $receptionMentorMessage);
+
+    $this->information['matchingHistoryId'] = $matchingHistoryId;
+    $this->information['popupFlag'] = '1';
+    //return view('matchingDetails', $this->information);
+    //return redirect(route('matchingDetails', [$this->information]));
+    return redirect()->route('matching.detail.init', $this->information);
+    //return redirect()->route('home', []);
   }
 
 

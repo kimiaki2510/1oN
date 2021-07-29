@@ -13,8 +13,10 @@ return [
     | This file and the message specification should always be in sync.
     |
     */
-    'ONEON0001' => ':0を1つ以上選択してください。',
-
+    'ONEON0001' => ':0が未選択です',
+    'ONEON0002' => ':0が未入力です',
+    'ONEON0003' => 'メッセージの上限は400文字までです',
+    
     'CMNE00001' => '検索条件を1つ以上指定してください。',
     'CMNE00002' => ':0を選択してください。',
     'CMNE00003' => ':0を1つ以上選択してください。',

@@ -1011,3 +1011,32 @@ ul.navbar-nav > li > a:focus {
   padding-top: 0;
   padding-bottom: 50px;
 }
+
+/* header_error */
+.error-group {
+  margin: auto;
+  text-align: center;
+  width: 720px;
+  background-color: #FF0000;
+  border-radius: 5px 5px 5px 5px;
+  padding-top: 14px;
+  padding-bottom: 14px;
+}
+
+.error-message {
+  text-align: left;
+  font-size: 16px;
+  font: normal normal bold 16px/28px Meiryo;
+  letter-spacing: 0px;
+  color: #FFFFFF;
+  opacity: 0.87;
+}
+
+.error-group ul, li {
+  padding-bottom: 0px;
+  margin: 0px;
+}
+
+.error-container {
+  margin-bottom: 20px;
+}

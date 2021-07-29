@@ -4,6 +4,7 @@ namespace App\Exceptions;
 
 use Exception;
 use Illuminate\Foundation\Exceptions\Handler as ExceptionHandler;
+use Symfony\Component\HttpKernel\Exception\HttpExceptionInterface;
 
 class Handler extends ExceptionHandler
 {
@@ -52,4 +53,20 @@ class Handler extends ExceptionHandler
     {
         return parent::render($request, $exception);
     }
+
+    /**
+     * Render an exception into an HTTP response.
+     * 特定のHTTPステータス以外はシステムエラー画面を表示するように拡張する
+     * @param  \Symfony\Component\HttpKernel\Exception\HttpExceptionInterface $exception
+     * @return string
+     *
+     */
+    protected function getHttpExceptionView(HttpExceptionInterface $exception)
+    {
+        if (in_array($exception->getStatusCode(), ['403', '404', '422', '503'])) {
+            return "errors::{$exception->getStatusCode()}";
+        }
+        return 'errors::500';
+    }
+
 }

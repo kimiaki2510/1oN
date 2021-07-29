@@ -20,7 +20,6 @@ class MatchingDetails1onCompletionController extends Controller
      * @return マッチング詳細
      */
     public function init(Request $request){
-
         $matchingHistoryId = $request->matchingHistoryId;
         //社員同士のマッチングデータの取得
         $getEmployeeData = $this->matchingDetails1onCompletionServices->getMatchingData($matchingHistoryId);

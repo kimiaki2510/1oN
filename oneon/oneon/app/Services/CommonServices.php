@@ -101,10 +101,8 @@ class CommonServices
     public function createEmployeeHistory($oneonId)
     {
       $employeeInformation = $this->employeeInformation($oneonId);
-      
       DB::table('t_employee_histories')
-      ->insert(
-        [
+      ->insert([
         'oneon_id' => $employeeInformation->oneon_id
         , 'employee_number' => $employeeInformation->employee_number
         , 'last_name' => $employeeInformation->last_name
@@ -124,14 +122,15 @@ class CommonServices
         , 'destination_designation_flag' => $employeeInformation->destination_designation_flag
         , 'deleted_flag' => $employeeInformation->deleted_flag
         , 'created_at' => NOW()
-        , 'updated_at' => NOW()]
-      );
+        , 'updated_at' => NOW()
+      ]);
     }
   
   
     public function employeeInformation($oneonId)
     {
       return DB::table('t_employees')
+        ->where('oneon_id', $oneonId)
         ->select(DB::raw('
         employee_id
         ,oneon_id

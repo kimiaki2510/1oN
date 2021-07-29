@@ -98,7 +98,7 @@
               </div>
               <div class="mentor-search-message">
                 <p>メッセージ</p>
-                <textarea id="mentor-message" class="form-textarea-short" name="receptionMessageText"></textarea>
+                <textarea id="mentor-message" class="form-textarea-short" name="receptionMessageText">1oN依頼を承認しました！</textarea>
               </div>
               <div >
                 <div>
@@ -121,7 +121,7 @@
               </div>
               <div class="mentor-search-message">
                 <p>メッセージ</p>
-                <textarea id="mentor-message" class="form-textarea-short" name="notReceptionMessageText"></textarea>
+                <textarea id="mentor-message" class="form-textarea-short" name="notReceptionMessageText">ごめんなさい！○○○○の件で今週は時間が取れず…！またの機会にお願いします！</textarea>
               </div>
               <div >
                 <div>
@@ -141,24 +141,6 @@
   </div>
 
   <script>
-    document.getElementById("text-button").onclick = function() {
-      // var menteeMessage = document.getElementById('mentee-message');
-      // var modalMessage = document.getElementById('model-message');
-      // var message = menteeMessage.value;
-      // var replaced = message.replace(/\n/g, '<br>');
-      // console.log(replaced);
-      // modalMessage.textContent = replaced;
-  
-      // var elements = document.getElementsByClassName('stance-input-checkbox');
-      // var modalUser = document.getElementsByClassName('modal-search-group');
-      // for (let step = 0; step < elements.length; step++) {
-      //   modalUser[step].setAttribute('class', 'mentor-search-group modal-search-group mentor-display-none');
-      //   if ($(elements[step]).prop("checked") == true) {
-      //     console.log(elements[step]);
-      //     modalUser[step].setAttribute('class', 'mentor-search-group modal-search-group mentor-display');
-      //   }
-      // }
-    };
   </script>
 
 @endsection

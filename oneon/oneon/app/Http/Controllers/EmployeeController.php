@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Services\EmployeeServices;
 use App\Services\CommonServices;
+use App\Http\Requests\DefinitiveRegistRequest;
 use Symfony\Component\HttpKernel\Exception\UnprocessableEntityHttpException;
 
 class EmployeeController extends Controller
@@ -64,16 +65,14 @@ class EmployeeController extends Controller
       }
       array_push($allDepartments, $tmpDepartment);
     }
-    //dd($allDepartments);
     
-
     $this->information['skills'] = $allSkills;
     $this->information['departments'] = $allDepartments;
     return view('pages.employee.definitive-regist', $this->information);
   }
 
-  public function definitiveExecute(Request $request) {
-
+  public function definitiveExecute(DefinitiveRegistRequest $request) {
+    dd($request->all());
     // ONEONを取得
     // $oneonId = Auth::user()->oneon_id;
     $oneonId = 1000000001;
@@ -157,7 +156,7 @@ class EmployeeController extends Controller
 
     // ONEONを取得
     // $oneonId = Auth::user()->oneon_id;
-    $oneonId = 1000000001;
+    $oneonId = 1000000010;
 
 
     //tagコードを連結
