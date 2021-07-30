@@ -90,8 +90,11 @@
                 <p class="profile-name">{{ $completion['full_name'] }}</p>
               </div>
               <div class="card-btn">
-                <form method="post" action="{{ route('matching.detail.init', ['matchingHistoryId' => $completion['matching_history_id'], 'menteeOneonId' => $completion['mentor_oneon_id']]) }}">
+                <!-- <form method="get" action="{{ route('matching.detail.init', ['matchingHistoryId' => $completion['matching_history_id'], 'menteeOneonId' => $completion['mentor_oneon_id']]) }}"> -->
+                <form method="get" action="/matchingDetails">
                   @csrf
+                  <input type="hidden" name="matchingHistoryId" value="{{ $completion['matching_history_id'] }}">
+                  <input type="hidden" name="menteeOneonId" value="{{ $completion['mentor_oneon_id'] }}">
                   <button type="submit" class="btn-primary-S card-btn">詳細を見る</button>
                 </form>
               </div>
