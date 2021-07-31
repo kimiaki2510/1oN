@@ -14,6 +14,7 @@
 <!-- 不備箇所 -->
 <!-- aタグのリンク先 -->
 <!-- ユーザ画像 -->
+<!-- 日付変更 -->
 <!-- ログインユーザid -->
 
   <div class="content-container">
@@ -33,7 +34,7 @@
             @endforeach
           </div>
           <div class="mentor-search-tag-group">
-            @foreach ($userJobCurrentTagNames as $jobCurrent)
+            @foreach ($menteeJobCurrentTagNames as $jobCurrent)
                 <p class="mentor-search-tag">{{ $jobCurrent }}</p>
             @endforeach
             @foreach ($tagCodeMentee as $skillTag)
@@ -58,6 +59,9 @@
             @endforeach
           </div>
           <div class="mentor-search-tag-group">
+            @foreach ($mentorJobCurrentTagNames as $jobCurrent)
+              <p class="mentor-search-tag">{{ $jobCurrent }}</p>
+            @endforeach
             @foreach ($tagCodeMentor as $skillTag)
               <p class="mentor-search-tag">{{ $skillTag }}</p>
             @endforeach

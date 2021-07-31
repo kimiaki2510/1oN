@@ -156,7 +156,7 @@ class EmployeeController extends Controller
 
     // ONEONを取得
     // $oneonId = Auth::user()->oneon_id;
-    $oneonId = 1000000010;
+    $oneonId = 1000000001;
 
 
     //tagコードを連結

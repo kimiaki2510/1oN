@@ -45,3 +45,4 @@ Route::get('/matchingDetails', 'MatchingDetails1onCompletionController@init')->n
 Route::get('/password/change', 'PasswordController@changePassword')->name('password.change');
 
 Route::get('/password/reset', 'PasswordController@resetPassword')->name('password.reset');
+Route::get('/matching/history', 'MatchingDetails1onCompletionController@history')->name('maching.history');
