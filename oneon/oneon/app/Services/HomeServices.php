@@ -126,20 +126,38 @@ class HomeServices
     return $result;
   }
 
-  public function getArticleInfo($menteeTime)
+  public function getArticleInfo($menteeTime, $menteeRequest)
   {
     $date = new Carbon(Carbon::now());
     $nowDate = date_create($date);
-    $url = '';
+    $menteeRequestCount = count($menteeRequest);
+    $how_to_use_url = 'https://note.com/rond_inc/n/n04b980e32104';
+    $matching_request_url = 'https://note.com/rond_inc/n/ncdbc2f701f16';
 
-    if ($menteeTime == 0) {
-      //メンティー回数が０の場合
+    if ($menteeTime == 0 && $menteeRequestCount == 0) {
+      //メンティー回数が０、マッチング申請がない場合
       return DB::table('m_articles')
-        ->where('m_articles.article_url', '=', $url)
+        ->where('m_articles.article_url', '=', $how_to_use_url)
         ->select(DB::raw('
-          article_url
+          article_url,
+          article_image_path,
+          article_title,
+          article_message
         '))
         ->whereRaw('m_articles.deleted_flag <> 1')
+        ->get();
+    } elseif ($menteeTime == 0 && $menteeRequestCount >= 1) {
+      //メンティー回数が０、マッチング申請がある場合
+      return DB::table('m_articles')
+      ->where('m_articles.article_url', '=', $how_to_use_url)
+      ->orWhere('m_articles.article_url', '=', $matching_request_url)
+        ->select(DB::raw('
+          article_url,
+          article_image_path,
+          article_title,
+          article_message
+        '))
+        ->whereRaw("m_articles.deleted_flag <> 1")
         ->get();
     } else {
       //メンティー回数が1回以上の場合
@@ -147,9 +165,14 @@ class HomeServices
         ->whereDate('m_articles.article_start_date', '<', $nowDate)
         ->whereDate('m_articles.article_end_date', '>', $nowDate)
         ->select(DB::raw('
-          article_url
+          article_url,
+          article_image_path,
+          article_title,
+          article_message
         '))
         ->whereRaw('m_articles.deleted_flag <> 1')
+        ->orderByRaw('article_id DESC')
+        ->limit(3)
         ->get();
     }
   }

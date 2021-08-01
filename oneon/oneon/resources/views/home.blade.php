@@ -41,7 +41,7 @@
           <a href="/employee/update" class="profile-link"><svg class="profile-icon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16"><rect width="16" height="16" fill="none"/><path d="M12.415,8c0-.138-.006-.27-.018-.408l1.095-.846a.611.611,0,0,0,.153-.78l-1.1-1.938a.575.575,0,0,0-.736-.252l-1.266.546a4.446,4.446,0,0,0-.689-.408L9.683,2.528A.594.594,0,0,0,9.1,2h-2.2a.6.6,0,0,0-.589.528L6.146,3.914a4.446,4.446,0,0,0-.689.408L4.192,3.776a.575.575,0,0,0-.736.252l-1.1,1.944a.613.613,0,0,0,.153.78L3.6,7.6c-.012.132-.018.264-.018.4s.006.27.018.408l-1.095.846a.611.611,0,0,0-.153.78l1.1,1.938a.575.575,0,0,0,.736.252l1.266-.546a4.446,4.446,0,0,0,.689.408l.171,1.386A.594.594,0,0,0,6.9,14h2.2a.594.594,0,0,0,.583-.528l.171-1.386a4.446,4.446,0,0,0,.689-.408l1.266.546a.575.575,0,0,0,.736-.252l1.1-1.938a.613.613,0,0,0-.153-.78l-1.095-.846A3.161,3.161,0,0,0,12.415,8ZM8.024,10.1A2.1,2.1,0,1,1,10.084,8,2.083,2.083,0,0,1,8.024,10.1Z" transform="translate(0)" fill="#fbb03b"/></svg>会員情報変更</a>
         </div>
         <div class="userInfo-change-link-container">
-          <a href="/employee/update" class="profile-link"><svg class="profile-icon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16"><path d="M0,0H16V16H0Z" fill="none"/><path d="M7.994,2A6,6,0,1,0,14,8,6,6,0,0,0,7.994,2ZM8,12.8A4.8,4.8,0,1,1,12.8,8,4.8,4.8,0,0,1,8,12.8ZM7.868,5H7.832a.43.43,0,0,0-.432.432V8.264a.594.594,0,0,0,.294.516l2.49,1.494a.429.429,0,1,0,.438-.738L8.3,8.156V5.432A.43.43,0,0,0,7.868,5Z" fill="#fbb03b"/></svg>過去の1oN</a>
+          <a href="/matching/history" class="profile-link"><svg class="profile-icon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16"><path d="M0,0H16V16H0Z" fill="none"/><path d="M7.994,2A6,6,0,1,0,14,8,6,6,0,0,0,7.994,2ZM8,12.8A4.8,4.8,0,1,1,12.8,8,4.8,4.8,0,0,1,8,12.8ZM7.868,5H7.832a.43.43,0,0,0-.432.432V8.264a.594.594,0,0,0,.294.516l2.49,1.494a.429.429,0,1,0,.438-.738L8.3,8.156V5.432A.43.43,0,0,0,7.868,5Z" fill="#fbb03b"/></svg>過去の1oN</a>
         </div>
       </div>
       <div class="main-container">
@@ -156,8 +156,22 @@
           @endforeach
         </div>
 
-        
-        <a href="" class="btn-sub-S btn-hover">過去の記事をもっと見る</a>
+        <div class="article-container">
+          @foreach ($articlesInfo as $article)
+            <div class="article-background-card">
+              <div class="article-image-group">
+              <img class="article-image" width="20" src="images/illustration/thumbnail_knowhow1@2x.png" alt="">
+              </div>
+              <div class="article-content">
+                <p class="article-title">{{ $article['article_title'] }}</p>
+                <p class="article-message">{{ $article['article_message'] }}</p>
+                <a href="{{ $article['article_url'] }}" class="article-link">詳細はこちら</a>
+              </div>
+            </div>
+          @endforeach
+        </div>
+
+        <a href="https://rondtkayk111.notion.site/1oN-e0594989b1aa499693f2f385b4b4cae2" class="btn-sub-S btn-hover">過去の記事をもっと見る</a>
 
       </div>
     </div>

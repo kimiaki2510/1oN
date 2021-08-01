@@ -711,7 +711,7 @@ ul.navbar-nav > li > a:focus {
   display: inline-block;
   font-size: 16px;
   font: normal normal normal 16px/24px Meiryo;
-  color: #00000061;
+  color: black;
   background-color: #F7F7F7;
   width: 488px;
   height: 56px;
@@ -726,7 +726,7 @@ ul.navbar-nav > li > a:focus {
   display: inline-block;
   font-size: 16px;
   font: normal normal normal 16px/24px Meiryo;
-  color: #00000061;
+  color: black;
   background-color: #F7F7F7;
   width: 488px;
   height: 204px;
@@ -741,7 +741,7 @@ ul.navbar-nav > li > a:focus {
   display: inline-block;
   font-size: 16px;
   font: normal normal normal 16px/24px Meiryo;
-  color: #00000061;
+  color: black;
   background-color: #F7F7F7;
   width: 488px;
   height: 132px;
@@ -1033,8 +1033,8 @@ ul.navbar-nav > li > a:focus {
 }
 
 .error-group ul, li {
-  padding-bottom:0px;
-  margin:0px;
+  padding-bottom: 0px;
+  margin: 0px;
 }
 
 .error-container {

@@ -91,7 +91,7 @@
         
         <!-- モーダル・ダイアログ（受ける場合） -->
         <div class="modal" id="receptionModal" tabindex="-1">
-          <div class="modal-dialog modal-lg">
+          <div class="modal-dialog modal-dialog-centered modal-lg">
             <div class="modal-content card-background-white card-background-white-mg">
               <div>
                 <h4 class="modal-title">メンティーへのメッセージを入力してください</h4>
@@ -114,7 +114,7 @@
 
         <!-- モーダル・ダイアログ (受けない場合）-->
         <div class="modal" id="notReceptionModal" tabindex="-1">
-          <div class="modal-dialog modal-lg">
+          <div class="modal-dialog modal-dialog-centered modal-lg">
             <div class="modal-content card-background-white card-background-white-mg">
               <div>
                 <h4 class="modal-title">メンターを受けない理由を入力し、送信してください</h4>

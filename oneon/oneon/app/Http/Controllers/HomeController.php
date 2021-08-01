@@ -45,8 +45,8 @@ class HomeController extends Controller
       $mentorMatchReceptionInfo = json_decode(json_encode($this->homeService->getHomeMentorMatchInfoByOneonId($oneonId)), true);
       $matchInfo = $this->homeService->getSeparateMatchInfo($menteeMatchInfo, $mentorMatchReceptionInfo);
       //記事を取得
-      $articlesInfo = $this->homeService->getArticleInfo($userInfo['mentee_times']);
-
+      $articlesInfo = json_decode(json_encode($this->homeService->getArticleInfo($userInfo['mentee_times'], $matchInfo['menteeRequest'])), true);
+      
       //タグ名を取得
       $userSkillTagNames = json_decode(json_encode($this->commonService->getUserSkillTagNames($userInfo['tag_code'])), true);
       $userDepartmentTagNames = json_decode(json_encode($this->commonService->getUserFullDepartmentTagNames($userInfo['department_current_code'])), true);
@@ -62,6 +62,7 @@ class HomeController extends Controller
       $this->information['completions'] = $matchInfo['completion'];
       $this->information['notMatchings'] = $matchInfo['notMatching'];
       $this->information['autoNotMatchings'] = $matchInfo['autoNotMatching'];
+      $this->information['articlesInfo'] = $articlesInfo;
       return view('home', $this->information);
     }
 }

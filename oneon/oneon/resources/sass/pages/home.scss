@@ -243,3 +243,68 @@
   color: #FF0000;
   margin-bottom: 25px;
 }
+
+/* 記事 */
+.article-background-card {
+  padding: 0px;
+  margin-bottom: 30px;
+  text-align: center;
+  width: 720px;
+  height: 100%;
+  background-color: #FFFFFF;
+  box-shadow: 0px 5px 10px #0000001A;
+  border-radius: 10px 10px 10px 10px;
+}
+
+.article-image-group {
+  display: inline-block;
+  width: 240px;
+  height: 157px;
+}
+
+.article-image-group img {
+  width: 240px;
+  height: 157px;
+}
+
+.article-content {
+  display: inline-block;
+  width: 480px;
+  height: 157px;
+  padding: 20px 40px;
+}
+
+.article-title {
+  font-size: 16px;
+  text-align: left;
+  padding: 0px;
+  margin: 0px;
+  font: normal normal bold 16px/21px Meiryo;
+  letter-spacing: 0px;
+  color: #000000;
+  opacity: 1;
+}
+
+.article-message {
+  font-size: 14px;
+  text-align: left;
+  padding: 0px;
+  margin: 0px;
+  font: normal normal normal 14px/21px Meiryo;
+  letter-spacing: 0px;
+  color: #000000;
+}
+
+.article-link {
+  font-size: 14px;
+  text-align: left;
+  padding: 0px;
+  margin: 0px;
+  font: normal normal normal 14px/21px Meiryo;
+  letter-spacing: 0px;
+  color: #FBB03B;
+}
+
+.article-link:hover {
+  color: #FBB03B;
+}
