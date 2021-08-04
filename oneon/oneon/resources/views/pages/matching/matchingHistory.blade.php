@@ -14,12 +14,11 @@
 <!-- カードの間隔 -->
 <!-- ログインID -->
   @for ($i=0; $i < count($matchingHistoryList); $i++)
-    <div class="content-container">
+    <div class="content-container" style="padding-top: 40px;">
       <!-- 日時表示 -->
-      <div class="matching-date" style="font-family: Meiryo; font-size: 15px; font-weight: bold;">{{ $matchingHistoryList[$i]['updated_at'] }} {{ $DayOfWeek[$i]}}</div>
-      <div class="card-background-white">
-        <p class="matching-detail-title">1oN成立</p>
-        <p class="matching-detail-Message">メンターとマッチングしました。当日になったら1on1を開始しましょう!当日の流れは<a class="matching-detail-link" href="#">こちら</a></p>
+      <div class="matching-date" style="margin-bottom: 15px;">{{ $matchingHistoryList[$i]['updated_at'] }} {{ $DayOfWeek[$i]}}</div>
+      <div class="card-background-white" style="margin-bottom: 50px;">
+        <p class="matching-detail-title">成立した過去の1oN</p>
         <!-- メンティー情報 -->
         <div class="user-group">
           <div class="mentee-reception-image-group">
@@ -70,7 +69,6 @@
             <p class="mentorIntroduce">{{ $matchingHistoryList[$i]['mentor_message'] }}</p>
           </div>
         </div>
-        <a href="/home" class="btn-sub-S btn-hover">戻る</a>
       </div>
     </div>
   @endfor
