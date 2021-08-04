@@ -14,7 +14,6 @@
 <!-- カードの間隔 -->
 <!-- ログインID -->
   @for ($i=0; $i < count($matchingHistoryList); $i++)
-  
     <div class="content-container" style="padding-top: 40px;">
       <!-- 日時表示 -->
       <div class="matching-date" style="margin-bottom: 15px;">{{ $matchingHistoryList[$i]['updated_at'] }} {{ $DayOfWeek[$i]}}</div>
