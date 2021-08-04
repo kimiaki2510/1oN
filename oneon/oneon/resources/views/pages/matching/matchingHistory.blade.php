@@ -81,7 +81,7 @@
     let elementMentorInfo = document.getElementsByClassName('mentorIntroduce');
     let matchingHistoryList = @json($matchingHistoryList);
     for (let i = 0; i < matchingHistoryList.length; i++) {
-      //ワンオンid取得
+      //ワンオンID取得
       let mentee_oneon_id = matchingHistoryList[i]['mentee_oneon_id'];
       let mentor_oneon_id = matchingHistoryList[i]['mentor_oneon_id'];
       //ログインユーザと同値のワンオンidがある方のカラーを変更
