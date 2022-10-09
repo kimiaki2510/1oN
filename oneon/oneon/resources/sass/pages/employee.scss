@@ -1,0 +1,202 @@
+@charset "UTF-8";
+.card-center {
+  text-align: center;
+}
+
+.content-container {
+  margin-top: 120px;
+}
+
+.card-background-white {
+  margin: auto;
+  text-align: center;
+  width: 720px;
+  background: white 0% 0% no-repeat padding-box;
+  box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  opacity: 1;
+}
+
+.card-background-white-password-test {
+  display: block;
+  margin: 24px 0px;
+  width: 720px;
+  padding: 40px;
+  /* text-align: center; */
+  /* height: 100%; */
+  background-color: #FFFFFF;
+  box-shadow: 0px 5px 10px #0000001A;
+  border-radius: 10px 10px 10px 10px;
+}
+
+.card-background-white-mg {
+  margin: 130px 50px;
+  width: 720px;
+  padding: 40px;
+  /* text-align: center; */
+  /* height: 100%; */
+  background-color: #FFFFFF;
+  box-shadow: 0px 5px 10px #0000001A;
+  border-radius: 10px 10px 10px 10px;
+}
+
+.regist-content-item {
+  margin-bottom: 20px;
+}
+
+.select-comment {
+  font-size: 24px;
+  letter-spacing: var(--unnamed-character-spacing-0);
+  color: var(--unnamed-color-000000);
+  text-align: center;
+  font: normal normal bold 24px/11px Meiryo;
+  margin-bottom: 35px;
+}
+
+.select-title {
+  font-size: 16px;
+  letter-spacing: var(--unnamed-character-spacing-0);
+  color: var(--unnamed-color-000000);
+  text-align: center;
+  font: normal normal bold 16px/17px Meiryo;
+  letter-spacing: 0px;
+  color: #000000;
+  margin-bottom: 20px;
+}
+
+.skilltag-group {
+  margin-bottom: 0px;
+}
+
+.required {
+  font-size: 11px;
+  color: #FF0000;
+  text-align: center;
+  font: normal normal normal 11px/11px Meiryo;
+}
+
+.arbitrarily {
+  font-size: 11px;
+  letter-spacing: var(--unnamed-character-spacing-0);
+  color: var(--フォント-000（38-）);
+  text-align: center;
+  font: normal normal normal 11px/17px Meiryo;
+  letter-spacing: 0px;
+  color: #00000061;
+  opacity: 38%;
+}
+
+.tag-input-checkbox {
+  z-index: 1;
+  position: absolute;
+  left: -9999px;
+}
+
+.tag-laravel-checkbox {
+  z-index: 1;
+  display: inline-block;
+  position: relative;
+  font-size: 14px;
+  font: normal normal bold 14px/19px Noto Sans;
+  color: #FFFFFF;
+  background-color: #BBBBBB;
+  text-align: center;
+  padding: 5px 40px;
+  border-radius: 30px 30px 30px 30px;
+  letter-spacing: var(--unnamed-character-spacing-0);
+  white-space: nowrap;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  transition: background-color 0.2s, box-shadow 0.2s;
+  margin-right: 5px;
+  margin-bottom: 15px;
+}
+
+.tag-laravel-checkbox:last-child {
+  margin-right: 0px;
+}
+
+.tag-input-checkbox:checked + .tag-laravel-checkbox {
+  background-color: #FBB03B;
+}
+
+.tag-input-checkbox:checked + .tag-laravel-checkbox::before {
+  background-color: #BBBBBB;
+}
+
+.accordion-group {
+  padding: 0 80px 0 80px;
+}
+
+.department-container {
+  text-align: center;
+}
+
+.department-group {
+  margin-bottom: 40px;
+}
+
+.accordion-title {
+  padding: 20px;
+  font-size: 16px;
+  background-color: #F7F7F7;
+  border: 1px solid #DDDDDD;
+  font: normal normal normal 16px/24px Meiryo;
+  letter-spacing: 0px;
+  color: #000000DE;
+  opacity: 1;
+}
+
+.accordion-title:hover {
+  font: normal normal normal 16px/24px Meiryo;
+  letter-spacing: 0px;
+  color: #000000DE;
+  opacity: 1;
+}
+
+.accordion-larvel {
+  line-height: 64px;
+  padding: 18px 22px 10px 25px;
+  margin: 0px;
+  text-align: left;
+  border: 0.1px solid #DDDDDD;
+  font: normal normal normal 16px/24px Meiryo;
+}
+
+.accordion-check {
+  border-radius: 100px;
+}
+
+.accordion-left {
+  text-align: left;
+}
+
+.password-change-link-container {
+  text-align: left;
+  margin-bottom: 20px;
+  margin-top: 124px;
+  font-size: 12px;
+}
+
+.password-container {
+  margin: auto;
+  text-align: center;
+  width: 720px;
+}
+
+.password-change-link {
+  color: #FBB03B;
+  font: normal normal medium 12px/17px Noto Sans;
+}
+
+.password-change-link:hover {
+  color: #FBB03B;
+  font: normal normal medium 12px/17px Noto Sans;
+}
+
+.btn-test {
+  color: red;
+}

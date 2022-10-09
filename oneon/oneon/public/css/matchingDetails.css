@@ -1,0 +1,95 @@
+@charset "UTF-8";
+/* メンター詳細 */
+.card-message-fanction {
+  padding: 20px;
+  text-align: left;
+  width: 640px;
+  background-color: #FBB03B;
+  border-radius: 0px 50px 50px 50px;
+  font-size: 16px;
+  font: normal normal normal 16px/28px Meiryo;
+}
+
+/* メンター申請受付 */
+.matching-detail-title {
+  font-size: 24px;
+  font: normal normal bold 24px/36px Meiryo;
+  letter-spacing: 0px;
+  color: #000000;
+  margin-bottom: 5px;
+}
+
+.matching-detail-Message {
+  font-size: 15px;
+  letter-spacing: var(--unnamed-character-spacing-0);
+  text-align: center;
+  font: normal normal normal 15px/26px Meiryo;
+  letter-spacing: 0px;
+  opacity: 1;
+  color: #00000061;
+  margin-bottom: 30px;
+}
+
+.card-message-white matching-reception-message {
+  margin: 0px;
+}
+
+.mentee-reception-info-group {
+  display: inline-block;
+  width: 530px;
+  text-align: left;
+  vertical-align: top;
+  margin-bottom: px;
+}
+
+.user-group {
+  margin-bottom: 30px;
+}
+
+.matching-detail-footer-message {
+  font-size: 16px;
+  text-align: center;
+  font: normal normal bold 16px/35px Meiryo;
+  letter-spacing: 0px;
+  color: #000000DE;
+  opacity: 1;
+  margin-bottom: 5px;
+}
+
+.matching-detail-link-message {
+  font-size: 14px;
+  text-align: center;
+  font: normal normal normal 14px/21px Meiryo;
+  color: #000000;
+  margin-bottom: 40px;
+}
+
+.matching-detail-link {
+  color: #FBB03B;
+}
+
+.matching-detail-link:hover {
+  color: #FBB03B;
+}
+
+.matching-date {
+  font: var(--unnamed-font-style-normal) normal var(--unnamed-font-weight-bold) 15px/23px var(--unnamed-font-family-meiryo);
+  letter-spacing: var(--unnamed-character-spacing-0);
+  color: var(--unnamed-color-000000);
+  text-align: left;
+  font: normal normal bold 15px/23px Meiryo;
+  font-family: Meiryo;
+  font-size: 15px;
+  font-weight: bold;
+  letter-spacing: 0px;
+  color: #000000;
+  opacity: 1;
+}
+
+.content-container {
+  margin: auto;
+  text-align: center;
+  width: 720px;
+  border-radius: 10px;
+  opacity: 1;
+}
