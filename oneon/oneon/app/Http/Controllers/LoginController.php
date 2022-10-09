@@ -1,7 +1,8 @@
 <?php
 
-namespace App\Http\Controllers\Auth;
+namespace App\Http\Controllers;
 
+use Illuminate\Support\Facades\DB;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use App\Providers\RouteServiceProvider;
@@ -39,5 +40,32 @@ class LoginController extends Controller
     public function __construct()
     {
         $this->middleware('guest')->except('logout');
+    }
+
+    public function init() {
+        return view('pages.login.login', []);
+    }
+
+    public function signin(Request $request) {
+
+        $oneonId = $request->oneonid;
+        $password = $request->password;
+        
+        $query =  DB::table('t_employees')
+            ->where('t_employees.oneon_id', $oneonId)
+            ->select(DB::raw('
+                t_employees.oneon_id,
+                t_employees.mail_address_temporary
+            '))
+            ->where('oneon_id', $oneonId)
+            ->where('mail_address_temporary', $password)
+            ->first();
+
+        if (!empty($query)) {
+            session(['oneonId' => $oneonId]);
+            return redirect()->route('home');
+        }
+
+        return redirect()->back();
     }
 }
