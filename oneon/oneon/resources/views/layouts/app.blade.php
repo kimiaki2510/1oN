@@ -31,8 +31,5 @@
     <div id="main">
         @yield('body')
     </div>
-    <footer>
-        @include('components.footer')
-    </footer>
 </body>
 </html>

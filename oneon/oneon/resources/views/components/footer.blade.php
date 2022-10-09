@@ -5,7 +5,7 @@
       <a href="">プライバシーポリシー</a>
     </div>
     <div class="footer-right">
-      <p><span class="copy-writer">&copy;</span>2021 Rond inc.</p>
+      <p><span class="copy-writer">&copy;</span>2021 Tom inc.</p>
     </div>
   </div>
 </div>

@@ -1,7 +1,8 @@
 <?php
 
-namespace App\Http\Controllers\Auth;
+namespace App\Http\Controllers;
 
+use Illuminate\Support\Facades\DB;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use App\Providers\RouteServiceProvider;
@@ -54,21 +55,14 @@ class LoginController extends Controller
             ->where('t_employees.oneon_id', $oneonId)
             ->select(DB::raw('
                 t_employees.oneon_id,
-                concat( t_employees.last_name, " ", t_employees.first_name) as full_name,
-                t_employees.mentee_times,
-                t_employees.mentor_times,
-                t_employee_tags.tag_code,
-                t_employee_tags.department_current_code,
-                t_employee_tags.department_past_code,
-                t_employee_tags.job_current_code,
-                t_employee_tags.job_past_code
+                t_employees.mail_address_temporary
             '))
             ->where('oneon_id', $oneonId)
             ->where('mail_address_temporary', $password)
             ->first();
 
-        if (empty($query)) {
-            ession(['oneonId' => $oneonId]);
+        if (!empty($query)) {
+            session(['oneonId' => $oneonId]);
             return redirect()->route('home');
         }
 
