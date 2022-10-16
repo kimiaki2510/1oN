@@ -68,4 +68,9 @@ class LoginController extends Controller
 
         return redirect()->back();
     }
+
+    public function logout(Request $request) {
+        session()->flush();
+        return redirect()->route('login', []);
+    }
 }

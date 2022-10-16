@@ -32,6 +32,7 @@ Route::get('/session', function() {
 // Auth::routes();
 Route::get('/login', 'LoginController@init')->name('login');
 Route::post('/login/execute', 'LoginController@signin')->name('signin');
+Route::get('/logout', 'LoginController@logout')->name('logout');
 
 Route::get('/home', 'HomeController@index')->name('home');
 Route::get('/regist', 'EmployeeController@definitiveRegist')->name('definitive-regist');
